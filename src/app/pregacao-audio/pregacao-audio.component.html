@@ -1,0 +1,13 @@
+<div class="pregacao-content">
+  <div class="page-title">Pregações em áudio</div>
+  
+  <div class="div-ul" *ngFor="let pregacao of pregacoes">
+      <div class="div-audio">
+        <audio controls>
+          <source [src]="pregacao.url" />
+        </audio>
+      </div>
+      <div class="div-li-title">Mensagem: {{ pregacao.title }}</div>
+      <div class="div-li-title">Compartilhar via: <span class="fa fa-whatsapp whatsapp"></span></div>
+  </div>
+</div>

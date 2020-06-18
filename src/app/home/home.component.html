@@ -1,0 +1,27 @@
+<div class="sidebar">
+  <ul>
+    <li>
+      <img class="circle" [src]="user.photoURL" alt="Foto do perfil" />
+      <p>{{ user.displayName }}</p>
+      <hr/>
+    </li>
+    <li>
+      <a [routerLink]="['pregacao']" class="mobile-icon"><span class="fa fa-microphone"></span></a>
+      <a [routerLink]="['pregacao']" class="web-icon">Pregações em áudio</a>
+    </li>
+    <li>
+      <a [routerLink]="['sobre']" class="mobile-icon"><span class="fa fa-info"></span></a>
+      <a [routerLink]="['sobre']" class="web-icon">Sobre</a>
+    </li>
+    <li>
+      <a [routerLink]="['contato']" class="mobile-icon"><span class="fa fa-envelope-o"></span></a>
+      <a [routerLink]="['contato']" class="web-icon">Contato</a>
+    </li>
+    <li>
+      <a href="#" (click)="logout()">Sair</a>
+    </li>
+  </ul>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

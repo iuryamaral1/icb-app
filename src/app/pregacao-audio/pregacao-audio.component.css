@@ -1,0 +1,61 @@
+.div-ul {
+    display: flex;
+    border-bottom: 1px ridge;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.div-li-title {
+    padding: 8px;
+    width: 50%;
+}
+
+.table-head {
+    display: flex;
+}
+
+.table-head span {
+    font-size: 20px;
+}
+
+.table-head .title {
+    width: 60%;
+}
+
+.page-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pregacao-content {
+    padding-left: 2%;
+}
+
+.whatsapp {
+    color: #28b351;
+}
+
+@media only screen and (max-width: 700px) {
+    
+    .page-title {
+        font-size: 25px;
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .table-head {
+        display: none;
+    }
+
+    .div-ul {
+        display: block;
+        border-bottom: 2px ridge;
+        width: 70%;
+        padding: 10px;
+    }
+
+    .div-li-title {
+        width: 100%;
+    }
+}

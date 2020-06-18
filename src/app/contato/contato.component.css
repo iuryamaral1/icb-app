@@ -1,0 +1,11 @@
+.contato-content {
+    padding-left: 2%;
+    height: 100%;
+}
+
+.contato-dev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

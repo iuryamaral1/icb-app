@@ -1,0 +1,31 @@
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    position: fixed;
+    height: 250px;
+    background: #DDD;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer span {
+    padding-right: 15px;
+    font-size: 50px;
+}
+
+.footer .fb {
+    color: #3b5998;
+}
+
+.footer .twitter {
+    color: #1da1f2;
+}
