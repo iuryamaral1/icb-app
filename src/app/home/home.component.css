@@ -1,3 +1,21 @@
+.navbar {
+    height: 5%;
+    width: 100%;
+    background: #050543;
+}
+
+.navbar a { 
+    text-decoration: none;
+    color: #fff;
+    margin: 20%;
+}
+
+.bars {
+    color: white;
+    font-size: 30px;
+    margin-left: 2%; 
+}
+
 .sidebar {
     background: blue;
     width: 20%;
@@ -44,38 +62,29 @@
 }
 
 @media only screen and (max-width: 700px) {
-    
-    .circle {
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-    }
 
-    .mobile-icon {
-        display: block;
-    }
-
-    .web-icon {
+    .sidebar {
         display: none;
     }
 
-    .page-title {
-        font-size: 20px;
-        font-weight: 600;
-        margin: 20 0 20 0;
+    .content {
+        position: relative;
+        margin: auto;
     }
 
-    .table-head {
-        display: none!important;
+    .divider {
+        width: 100%;
+        height: 5px;
     }
 
-    .div-ul {
-        display: block;
-        width: 65%;
-        padding: 10px;
-    }    
+    .red {
+        background: #9c303a;
+    }
 
-    .div-li-title {
-        width: 100%!important;
+    .hour-info {
+        width: 100%;
+        height: 70px;
+        background: url('../../assets/banner-data.png') center no-repeat;
+        background-size: cover;
     }
 }

@@ -47,10 +47,7 @@ form.form1 {
     color: #fff;
     background: #281c80;
     border: 0;
-    padding-left: 125px;
-    padding-right: 125px;
-    padding-bottom: 15px;
-    padding-top: 13px;
+    padding: 13px 190px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 17px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);

@@ -10,11 +10,15 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 
   user: any;
+  dayName: string;
 
   constructor(private authService: AuthService,
               public router: Router) {
     this.user = JSON.parse(this.authService.getUser());
-    console.log(this.user);
+    if (this.user && this.user.displayName) {
+      this.user.displayName = this.user.displayName.split(' ')[0];
+    }
+    this.dayName = this.getDayName(new Date().getDay());
   }
 
   logout(): void {
@@ -23,4 +27,22 @@ export class HomeComponent {
     }
   }
 
+  getDayName(value: number): string {
+    switch (value) {
+      case 0:
+        return 'Domingo';
+      case 1:
+        return 'Segunda-feira';
+      case 2:
+        return 'Terça-feira';
+      case 3:
+        return 'Quarta-feira';
+      case 4:
+        return 'Quinta-feira';
+      case 5:
+        return 'Sexta-feira';
+      case 6:
+        return 'Sábado';
+    }
+  }
 }

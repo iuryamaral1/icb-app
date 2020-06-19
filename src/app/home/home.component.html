@@ -1,3 +1,8 @@
+<div class="navbar">
+  <span class="fa fa-bars bars"></span>
+  <a href="#">A paz do Senhor, <span class="username">{{ user.displayName }}!</span></a>
+</div>
+<div class="divider red"></div>
 <div class="sidebar">
   <ul>
     <li>
@@ -22,6 +27,6 @@
     </li>
   </ul>
 </div>
-<div class="content">
-  <router-outlet></router-outlet>
+<div class="hour-info">
+  <span class="today">Hoje é {{ dayName }}</span>
 </div>
