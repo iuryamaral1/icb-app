@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { PregacaoAudioComponent } from './pregacao-audio/pregacao-audio.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
+import { PresentationComponent } from './presentation/presentation.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ContatoComponent } from './contato/contato.component';
     HomeComponent,
     PregacaoAudioComponent,
     SobreComponent,
-    ContatoComponent
+    ContatoComponent,
+    PresentationComponent
   ],
   imports: [
     BrowserModule,

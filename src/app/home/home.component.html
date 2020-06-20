@@ -1,81 +1,43 @@
-<div class="navbar">
+<div class="navbar" (click)="displayMenu()">
   <span class="fa fa-bars bars"></span>
 </div>
 <div class="divider red"></div>
-<div class="sidebar">
+<div [ngClass]="showMenu ? 'displayMenu' : 'hideMenu'">
   <ul>
     <li>
       <img class="circle" [src]="user.photoURL" alt="Foto do perfil" />
       <p>{{ user.displayName }}</p>
-      <hr/>
     </li>
     <li>
-      <a [routerLink]="['pregacao']" class="mobile-icon"><span class="fa fa-microphone"></span></a>
-      <a [routerLink]="['pregacao']" class="web-icon">Pregações em áudio</a>
+      <a href="#" class="web-icon">
+        <span class="fa fa-inbox"></span>
+        <span>Boletim Eletrônico</span>
+      </a>
     </li>
     <li>
-      <a [routerLink]="['sobre']" class="mobile-icon"><span class="fa fa-info"></span></a>
-      <a [routerLink]="['sobre']" class="web-icon">Sobre</a>
+      <a [routerLink]="['pregacao']" class="web-icon">
+        <span class="fa fa-microphone"></span>
+        <span>Pregações em áudio</span>
+      </a>
     </li>
     <li>
-      <a [routerLink]="['contato']" class="mobile-icon"><span class="fa fa-envelope-o"></span></a>
-      <a [routerLink]="['contato']" class="web-icon">Contato</a>
+      <a [routerLink]="['sobre']" class="web-icon">
+        <span class="fa fa-info"></span>
+        <span>Sobre</span>
+      </a>
     </li>
     <li>
-      <a href="#" (click)="logout()">Sair</a>
+      <a [routerLink]="['contato']" class="web-icon">
+        <span class="fa fa-phone"></span>
+        <span>Contato</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" (click)="logout()">
+        <span class="fa fa-sign-out"></span>
+        <span>Sair</span>
+      </a>
     </li>
   </ul>
 </div>
-<div class="hour-info">
-  <div class="today">Hoje é {{ dayName }}</div>
-  <div class="day">{{ day }}</div>
-  <div class="month-year">
-    <div>{{ month }}</div>
-    <div>{{ year }}</div>
-  </div>
-</div>
-<div class="verse-meditation">
-  <div class="label">PARA A SUA MEDITAÇÃO</div>
-  <div class="verse">
-    "E viu Deus que a luz era boa. E fez Deus separação entre a luz e as trevas."
-    <div>(Gn. 1.4)</div>
-  </div>
-  <div class="more-options">
-    <span>Ver mais</span>
-    <span class="fa fa-share-alt-square"></span>
-  </div>
-</div>
-<div class="audio-messages">
-  <div class="audio-message-title">
-    Mensagens em áudio
-  </div>
-  <div class="audio-message-text">
-    Ajude a propagar a palavra de Deus com as nossas mensagens em áudio
-  </div>
-</div>
-<div class="last-messages">
-  <div class="last-messages-title">Últimas adicionadas</div>
-  <div class="last-messages-added" *ngFor="let pregacao of pregacoes">
-    <div class="message">
-      <img src="../../assets/thumb-icb.png" alt="Thumb ICB" width="50"><br/>
-      {{ pregacao.title }}
-    </div>
-    <div class="see-more">
-      Ver mais
-    </div>
-  </div>
-</div>
-<div class="divider red">
-</div>
-<div class="social-networks">
-  <div class="social-networks-container">
-    <div class="title-social-networks">Redes Sociais</div>
-    <div class="title-social-networks">
-      <span class="fa fa-facebook-square"></span>
-      <span class="fa fa-instagram"></span>
-      <span class="fa fa-twitter"></span>
-      <span class="fa fa-youtube-play"></span>
-      <span class="fa fa-envelope-o"></span>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
