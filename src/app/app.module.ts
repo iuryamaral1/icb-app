@@ -10,7 +10,6 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
-import { app } from 'firebase';
 import { routes } from './app.routing';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
@@ -20,6 +19,12 @@ import { PregacaoAudioComponent } from './pregacao-audio/pregacao-audio.componen
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
 import { PresentationComponent } from './presentation/presentation.component';
+import { BibliaComponent } from './biblia/biblia.component';
+import { VersaoBibliaComponent } from './biblia/versao-biblia/versao-biblia.component';
+import { CapitulosBibliaComponent } from './biblia/capitulos-biblia/capitulos-biblia.component';
+import { LivroBibliaComponent } from './biblia/livro-biblia/livro-biblia.component';
+import { PregacaoReproducaoComponent } from './pregacao-reproducao/pregacao-reproducao.component';
+import { PregacaoService } from './services/pregacao.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,12 @@ import { PresentationComponent } from './presentation/presentation.component';
     PregacaoAudioComponent,
     SobreComponent,
     ContatoComponent,
-    PresentationComponent
+    PresentationComponent,
+    BibliaComponent,
+    VersaoBibliaComponent,
+    CapitulosBibliaComponent,
+    LivroBibliaComponent,
+    PregacaoReproducaoComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +50,7 @@ import { PresentationComponent } from './presentation/presentation.component';
     AngularFontAwesomeModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthService],
+  providers: [AuthService, PregacaoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

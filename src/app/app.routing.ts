@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from 'src/app/_helpers/auth.guard';
 import { SobreComponent } from './sobre/sobre.component';
 import { PresentationComponent } from './presentation/presentation.component';
+import { PregacaoReproducaoComponent } from './pregacao-reproducao/pregacao-reproducao.component';
 
 export const routes: Routes = [
     {
@@ -29,6 +30,9 @@ export const routes: Routes = [
                 canActivate: [AuthGuard]
             }, {
                 path: 'contato', component: ContatoComponent,
+                canActivate: [AuthGuard]
+            }, {
+                path: 'reproduzir-audio', component: PregacaoReproducaoComponent,
                 canActivate: [AuthGuard]
             }
         ]

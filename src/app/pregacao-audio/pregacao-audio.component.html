@@ -1,13 +1,25 @@
-<div class="pregacao-content">
-  <div class="page-title">Pregações em áudio</div>
-  
-  <div class="div-ul" *ngFor="let pregacao of pregacoes">
-      <div class="div-audio">
-        <audio controls>
-          <source [src]="pregacao.url" />
-        </audio>
-      </div>
-      <div class="div-li-title">Mensagem: {{ pregacao.title }}</div>
-      <div class="div-li-title">Compartilhar via: <span class="fa fa-whatsapp whatsapp"></span></div>
+<div class="library">
+  <div class="search">
+    <input type="text" />
+    <span class="fa fa-search"></span>
+  </div>
+  <div [ngClass]="showLoader ? 'displayLoader' : 'hideLoader'">
+    <div class="loader"></div>
+  </div>
+  <div class="audio" *ngFor="let pregacao of pregacoes">
+    <div class="icb-icon">
+      <img src="../../assets/thumb-icb.png" alt="ícone ICB" width="55" />
+    </div>
+    <div class="audio-message">
+      {{ pregacao.title }}
+    </div>
+    <div class="audio-message message-preacher">
+      <span>Pr. Joaquim Amaral</span>
+      <span class="fa fa-play-circle" (click)="hearMessage(pregacao)"></span>
+    </div>
+    <div class="audio-message icons">
+      <span class="fa fa-arrow-circle-down"></span>
+      <span class="fa fa-share-alt-square"></span>
+    </div>
   </div>
 </div>

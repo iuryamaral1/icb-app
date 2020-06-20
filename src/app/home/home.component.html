@@ -1,32 +1,47 @@
 <div class="navbar" (click)="displayMenu()">
   <span class="fa fa-bars bars"></span>
+  <div>
+    <ng-content select=".options"></ng-content>
+  </div>
 </div>
 <div class="divider red"></div>
 <div [ngClass]="showMenu ? 'displayMenu' : 'hideMenu'">
   <ul>
-    <li>
+    <li (click)="displayMenu()">
       <img class="circle" [src]="user.photoURL" alt="Foto do perfil" />
-      <p>{{ user.displayName }}</p>
+      <p title="user.displayName">{{ user.displayName }}</p>
     </li>
-    <li>
+    <li (click)="displayMenu()">
+      <a [routerLink]="['/home']" class="web-icon">
+        <span class="fa fa-home"></span>
+        <span>Início</span>
+      </a>
+    </li>
+    <li (click)="displayMenu()">
       <a href="#" class="web-icon">
         <span class="fa fa-inbox"></span>
         <span>Boletim Eletrônico</span>
       </a>
     </li>
-    <li>
+    <li (click)="displayMenu()">
+      <a [routerLink]="['biblia']" class="web-icon">
+        <span class="fa fa-book"></span>
+        <span>Bíblia Online</span>
+      </a>
+    </li>
+    <li (click)="displayMenu()">
       <a [routerLink]="['pregacao']" class="web-icon">
         <span class="fa fa-microphone"></span>
         <span>Pregações em áudio</span>
       </a>
     </li>
-    <li>
+    <li (click)="displayMenu()">
       <a [routerLink]="['sobre']" class="web-icon">
         <span class="fa fa-info"></span>
         <span>Sobre</span>
       </a>
     </li>
-    <li>
+    <li (click)="displayMenu()">
       <a [routerLink]="['contato']" class="web-icon">
         <span class="fa fa-phone"></span>
         <span>Contato</span>

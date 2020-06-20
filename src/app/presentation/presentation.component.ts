@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pregacao } from '../pregacao-audio/pregacao.model';
 import * as firebase from 'firebase';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-presentation',
@@ -15,7 +16,7 @@ export class PresentationComponent {
   year: number;
   pregacoes: Array<Pregacao> = new Array<Pregacao>();
 
-  constructor() { 
+  constructor(public router: Router) { 
     this.dayName = this.getDayName(new Date().getDay());
     this.day = new Date().getUTCDate();
     this.month = this.getMonthName(new Date().getMonth());
@@ -83,4 +84,7 @@ export class PresentationComponent {
     }
   }
 
+  redirectToAudioMessages(): void {
+    this.router.navigateByUrl('/home/pregacao');
+  }
 }
