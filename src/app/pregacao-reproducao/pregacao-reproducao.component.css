@@ -76,6 +76,7 @@
         color: whitesmoke;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .controls {
@@ -85,9 +86,11 @@
         color: whitesmoke;
         width: 60%;
         margin-left: 20%;
+        font-size: 25px;
     }
 
     .fa-undo {
         margin-top: 2%;
+        font-size: 25px
     }
 }
