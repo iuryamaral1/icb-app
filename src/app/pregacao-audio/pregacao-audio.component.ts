@@ -29,6 +29,7 @@ export class PregacaoAudioComponent {
           this.pregacoes.push(pregacao);
         });
       });
+
       this.displayLoader();
     });
   }

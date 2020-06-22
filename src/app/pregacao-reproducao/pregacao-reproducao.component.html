@@ -1,5 +1,4 @@
 <div class="options">
-  <span class="fa fa-arrow-circle-down"></span>
   <span class="fa fa-share-alt-square"></span>
 </div>
 <div class="container">
@@ -10,11 +9,23 @@
     <div class="title">
       {{ currentPregacao.title }}
     </div>
-    <div class="autor-message">
-      Autor Desconhecido
+    <audio #audioTag class="audio-tag" controls>
+      <source [src]="currentPregacao.url" />
+    </audio>
+    <div class="progress">
+      <div #progressInfo></div>
     </div>
-    <div class="progress-bar">
-      
+    <div class="track-info">
+      <span>{{ currentTime }}</span>
+      <span class="fa fa-undo" (click)="reload()"></span>
+      <span>{{ duration }}</span>
+    </div>
+    <div class="controls">
+      <span class="fa fa-fast-backward"></span>
+      <span class="fa fa-backward" (click)="minusFiveSec()"></span>
+      <span class="fa" [ngClass]="playing ? 'fa-pause' : 'fa-play'" (click)="playing ? pause() : play()"></span>
+      <span class="fa fa-forward" (click)="plusFiveSec()"></span>
+      <span class="fa fa-fast-forward"></span>
     </div>
   </div>
 </div>

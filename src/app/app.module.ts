@@ -25,6 +25,7 @@ import { CapitulosBibliaComponent } from './biblia/capitulos-biblia/capitulos-bi
 import { LivroBibliaComponent } from './biblia/livro-biblia/livro-biblia.component';
 import { PregacaoReproducaoComponent } from './pregacao-reproducao/pregacao-reproducao.component';
 import { PregacaoService } from './services/pregacao.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { PregacaoService } from './services/pregacao.service';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFontAwesomeModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [AuthService, PregacaoService],
   bootstrap: [AppComponent]

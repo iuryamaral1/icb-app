@@ -8,6 +8,10 @@
         overflow: hidden;
     }
 
+    .back-button {
+        margin-right: 2%;
+    }
+
     .search {
         color: whitesmoke;
         text-align: center;

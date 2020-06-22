@@ -28,6 +28,11 @@
         padding-right: 15%;
     }
 
+    .options a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
     .audio-message {
         height: 50%;
     }
@@ -47,7 +52,42 @@
         font-size: 14px;
     }
 
-    .progress-bar {
-        
+    .progress {
+        width: 60%;
+        height: 1%;
+        background: whitesmoke;
+        margin-left: 20%;
+        margin-top: 10%;
+    }
+    
+    .progress > div {
+        width: 0%;
+        height: 100%;
+        background-image: linear-gradient(to right, #a2313c, #5188c5);
+    }
+
+    .audio-tag {
+        display: none!important;
+    }
+
+    .track-info {
+        width: 60%;
+        margin-left: 20%;
+        color: whitesmoke;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10%;
+        color: whitesmoke;
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .fa-undo {
+        margin-top: 2%;
     }
 }
