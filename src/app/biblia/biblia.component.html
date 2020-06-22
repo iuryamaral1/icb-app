@@ -1,3 +1,17 @@
-<p>
-  biblia works!
-</p>
+<div class="background">
+  <div class="menu">
+    <select class="books" [(ngModel)]="bookSelected" (ngModelChange)="loadChaptersAndFirstOneText($event)" >
+      <option *ngFor="let book of books" [ngValue]="book" >
+        <span>{{ book.name }}</span>
+      </option>
+    </select>
+    <select class="chapters" [(ngModel)]="chapterSelected" (ngModelChange)="loadText()">
+      <option [ngValue]="chapter" *ngFor="let chapter of chapters">{{ chapter }}</option>
+    </select>
+  </div>
+  <div class="verses">
+    <div *ngFor="let verse of verses">
+      {{ verse.number }} {{ verse.text }}
+    </div>
+  </div>
+</div>

@@ -26,6 +26,7 @@ import { LivroBibliaComponent } from './biblia/livro-biblia/livro-biblia.compone
 import { PregacaoReproducaoComponent } from './pregacao-reproducao/pregacao-reproducao.component';
 import { PregacaoService } from './services/pregacao.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BoletimEletronicoComponent } from './boletim-eletronico/boletim-eletronico.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
     VersaoBibliaComponent,
     CapitulosBibliaComponent,
     LivroBibliaComponent,
-    PregacaoReproducaoComponent
+    PregacaoReproducaoComponent,
+    BoletimEletronicoComponent
   ],
   imports: [
     BrowserModule,
