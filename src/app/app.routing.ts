@@ -8,6 +8,8 @@ import { AuthGuard } from 'src/app/_helpers/auth.guard';
 import { SobreComponent } from './sobre/sobre.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { PregacaoReproducaoComponent } from './pregacao-reproducao/pregacao-reproducao.component';
+import { BoletimEletronicoComponent } from './boletim-eletronico/boletim-eletronico.component';
+import { BibliaComponent } from './biblia/biblia.component';
 
 export const routes: Routes = [
     {
@@ -33,6 +35,12 @@ export const routes: Routes = [
                 canActivate: [AuthGuard]
             }, {
                 path: 'reproduzir-audio', component: PregacaoReproducaoComponent,
+                canActivate: [AuthGuard]
+            }, {
+                path: 'boletim-eletronico', component: BoletimEletronicoComponent,
+                canActivate: [AuthGuard]
+            }, {
+                path: 'biblia', component: BibliaComponent,
                 canActivate: [AuthGuard]
             }
         ]

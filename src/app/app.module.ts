@@ -20,12 +20,12 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { BibliaComponent } from './biblia/biblia.component';
-import { VersaoBibliaComponent } from './biblia/versao-biblia/versao-biblia.component';
-import { CapitulosBibliaComponent } from './biblia/capitulos-biblia/capitulos-biblia.component';
-import { LivroBibliaComponent } from './biblia/livro-biblia/livro-biblia.component';
 import { PregacaoReproducaoComponent } from './pregacao-reproducao/pregacao-reproducao.component';
 import { PregacaoService } from './services/pregacao.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BoletimEletronicoComponent } from './boletim-eletronico/boletim-eletronico.component';
+import { VersionNamePipe } from './pipes/version-name.pipe';
+import { VersiculoComponent } from './biblia/versiculo/versiculo.component';
 
 @NgModule({
   declarations: [
@@ -37,10 +37,10 @@ import { HttpClientModule } from '@angular/common/http';
     ContatoComponent,
     PresentationComponent,
     BibliaComponent,
-    VersaoBibliaComponent,
-    CapitulosBibliaComponent,
-    LivroBibliaComponent,
-    PregacaoReproducaoComponent
+    PregacaoReproducaoComponent,
+    BoletimEletronicoComponent,
+    VersiculoComponent,
+    VersionNamePipe
   ],
   imports: [
     BrowserModule,

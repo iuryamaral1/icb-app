@@ -1,0 +1,57 @@
+@media only screen and (max-width: 700px) {
+    
+    .background {
+        width: 100%;
+        height: 94%;
+        background: #050559;
+    }
+
+    .menu {
+        height: 10%;
+        background: #050530;
+        color: whitesmoke;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px 0 15px;
+    }
+
+    .verses {
+        height: 84%;
+        overflow: auto;
+        color: whitesmoke;
+        padding: 5%;
+    }
+    
+    .version {
+        background: #050530;
+        color: whitesmoke; 
+        padding: 10px 0px 15px 15px;
+    }
+
+    .share-verse {
+        color: whitesmoke;
+        z-index: 1;
+        position: absolute;
+        background: #050559;
+        width: 100%;
+        margin-left: 5%;
+        padding-bottom: 1%;
+    }
+
+    .whatsapp {
+        padding: 2%;
+        background: green;
+        border-radius: 10px;
+        font-size: 15px;
+        margin-top: 2%;
+    }
+
+    .displayShareOption {
+        display: block;
+    }
+
+    .hideShareOption {
+        display: none;
+    }
+}

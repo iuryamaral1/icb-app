@@ -104,7 +104,7 @@
 
 .social-networks-container {
     color: whitesmoke;
-    width: 30%;
+    width: 65%;
     padding: 0px 10px 10px 10px;
     background: #ab2c32;
     position: absolute;
@@ -117,4 +117,5 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 18px;
 }

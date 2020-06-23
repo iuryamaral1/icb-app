@@ -62,6 +62,50 @@
     display: block;
 }
 
+.hideMenu {
+    display: none;
+}
+
+.displayMenu {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    background: #333;
+    width: 30%;
+}
+
+.displayMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.displayMenu li {
+    border: 1px solid #222;
+    padding: 3%;
+}
+
+.displayMenu li > p {
+    position: absolute;
+    margin-left: 22%;
+    top: 1%;
+    width: 60%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.displayMenu a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    margin-left: 7%;
+}
+
+.displayMenu a > span:first-child {
+    width: 10%;
+}
+
 @media only screen and (max-width: 700px) {
 
     .hideMenu {
@@ -121,6 +165,13 @@
     .red {
         background: #9c303a;
     }
+
+    .times-circle {
+        color: whitesmoke;
+        float: right;
+        margin: 16px 10px;
+        font-size: 20px;
+    }   
 
     
 }

@@ -10,6 +10,7 @@
     <li (click)="displayMenu()">
       <img class="circle" [src]="user.photoURL" alt="Foto do perfil" />
       <p title="user.displayName">{{ user.displayName }}</p>
+      <span class="fa fa-times-circle times-circle"></span>
     </li>
     <li (click)="displayMenu()">
       <a [routerLink]="['/home']" class="web-icon">
@@ -18,7 +19,7 @@
       </a>
     </li>
     <li (click)="displayMenu()">
-      <a href="#" class="web-icon">
+      <a [routerLink]="['boletim-eletronico']" class="web-icon">
         <span class="fa fa-inbox"></span>
         <span>Boletim Eletrônico</span>
       </a>
@@ -33,18 +34,6 @@
       <a [routerLink]="['pregacao']" class="web-icon">
         <span class="fa fa-microphone"></span>
         <span>Pregações em áudio</span>
-      </a>
-    </li>
-    <li (click)="displayMenu()">
-      <a [routerLink]="['sobre']" class="web-icon">
-        <span class="fa fa-info"></span>
-        <span>Sobre</span>
-      </a>
-    </li>
-    <li (click)="displayMenu()">
-      <a [routerLink]="['contato']" class="web-icon">
-        <span class="fa fa-phone"></span>
-        <span>Contato</span>
       </a>
     </li>
     <li>
