@@ -1,17 +1,30 @@
 <div class="background">
+  <div class="version">
+    <label>Versão: </label>
+    <select [(ngModel)]="versionSelected" (ngModelChange)="loadText()">
+      <option [ngValue]="version.version" *ngFor="let version of versions">
+        {{ version.version | versionName }}
+      </option>
+    </select>
+  </div>
   <div class="menu">
-    <select class="books" [(ngModel)]="bookSelected" (ngModelChange)="loadChaptersAndFirstOneText($event)" >
+    <label>Livro: </label> 
+    <select class="books" [(ngModel)]="bookSelected" (ngModelChange)="loadChaptersAndFirstOneText()" >
       <option *ngFor="let book of books" [ngValue]="book" >
         <span>{{ book.name }}</span>
       </option>
     </select>
+    <label>Cap.: </label>
     <select class="chapters" [(ngModel)]="chapterSelected" (ngModelChange)="loadText()">
       <option [ngValue]="chapter" *ngFor="let chapter of chapters">{{ chapter }}</option>
     </select>
   </div>
+  <div class="share-verse" [ngClass]="displayShareOption() ? 'displayShareOption' : 'hideShareOption'">
+    <div>Compartilhar via: <span class="fa fa-whatsapp whatsapp" (click)="shareSelectedVerses()"></span></div>
+  </div>
   <div class="verses">
     <div *ngFor="let verse of verses">
-      {{ verse.number }} {{ verse.text }}
+      <app-versiculo [verse]="verse" (click)="onSelectVerse(verse)"></app-versiculo>
     </div>
   </div>
 </div>

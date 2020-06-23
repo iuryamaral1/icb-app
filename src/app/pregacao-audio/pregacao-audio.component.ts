@@ -42,4 +42,8 @@ export class PregacaoAudioComponent {
     this.pregacaoService.compartilharPregacao(pregacao);
     this.router.navigateByUrl('/home/reproduzir-audio');
   }
+
+  redirectToHome(): void {
+    this.router.navigateByUrl('home');
+  }
 }

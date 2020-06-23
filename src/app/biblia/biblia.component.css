@@ -23,4 +23,35 @@
         padding: 5%;
     }
     
+    .version {
+        background: #050530;
+        color: whitesmoke; 
+        padding: 10px 0px 15px 15px;
+    }
+
+    .share-verse {
+        color: whitesmoke;
+        z-index: 1;
+        position: absolute;
+        background: #050559;
+        width: 100%;
+        margin-left: 5%;
+        padding-bottom: 1%;
+    }
+
+    .whatsapp {
+        padding: 2%;
+        background: green;
+        border-radius: 10px;
+        font-size: 15px;
+        margin-top: 2%;
+    }
+
+    .displayShareOption {
+        display: block;
+    }
+
+    .hideShareOption {
+        display: none;
+    }
 }
