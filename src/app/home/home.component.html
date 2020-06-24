@@ -1,4 +1,34 @@
-<div class="navbar" (click)="displayMenu()">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img class="circle" [src]="user.photoURL" alt="Foto do perfil" /> 
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']">Início<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['boletim-eletronico']">Boletim Eletrônico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['biblia']">Bíblia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['pregacao']">Pregações em áudio</a>
+        </li>
+      </ul>
+      <span (click)="logout()" class="navbar-text">
+        Sair
+      </span>
+    </div>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+<!-- <div class="navbar" (click)="displayMenu()">
   <span class="fa fa-bars bars"></span>
   <div>
     <ng-content select=".options"></ng-content>
@@ -43,5 +73,4 @@
       </a>
     </li>
   </ul>
-</div>
-<router-outlet></router-outlet>
+</div> -->
