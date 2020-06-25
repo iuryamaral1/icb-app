@@ -1,12 +1,38 @@
 <div class="row no-gutters">
   <div class="col-sm">
+    <div class="welcome h-100 pl-4 pull-left">
+      <div>Seja</div>
+      <div>Bem-Vindo!</div>
+    </div>
     <div class="hour-info">
-      <div class="today">Hoje é {{ dayName }}</div>
+      <div class="today">Hoje é {{ dayName }},</div>
       <div class="day">{{ day }}</div>
       <div class="month-year">
         <div>{{ month }}</div>
         <div>{{ year }}</div>
       </div>
+    </div>
+  </div>
+  <div class="col-sm verse-meditation h-100">
+    <div class="pt-2">PARA A SUA MEDITAÇÃO</div>
+    <div class="pt-3">
+      4 - E viu Deus que a luz era boa; e fez Deus separação entre as trevas e a luz. (Gn. 1.4)
+    </div>
+    <div class="pull-right pr-5 pb-3">Compartilhar <span class="fa fa-share-alt-square"></span></div>
+  </div>
+  <div class="col-sm mt-3 w-100 h-100 title-audio">
+    <div>
+      <span class="pr-2 font-weight-bold">Áudios</span>
+      <span>que</span>
+    </div>
+    <div class="font-weight-bold"><span class="fa fa-headphones"></span> Edificam</div>
+  </div>
+  <div class="col-sm audio-back">
+    <div class="w-50 pull-right pr-2 audio-message">
+      <span>
+        Pregações em áudio e reflexões para ouvir e compartilhar a Palavra de Deus
+      </span>
+      <button [routerLink]="['pregacao']" class="btn btn-danger">Ver mais</button>
     </div>
   </div>
 </div>

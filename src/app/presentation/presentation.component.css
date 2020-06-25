@@ -1,9 +1,31 @@
+.row {
+    padding-top: 17%;
+}
+
+.welcome {
+    font-size: 20px;
+    background: #f2f4f5;
+    width: 55%;
+    line-height: 25px;
+}
+
+.welcome div:last-child {
+    padding-left: 3%;
+    font-size: 27px;
+    font-weight: 600;
+}
+
 .hour-info {
-    width: 100%;
+    width: 45%;
     height: 100%;
-    background: url('../../assets/banner-data.png') center no-repeat;
-    background-size: cover;
-    color: whitesmoke;
+    background: #f2f4f5;
+    float: right;
+}
+
+.month-year {
+    margin-left: 40%;
+    font-weight: 600;
+
 }
 
 .today {
@@ -13,109 +35,55 @@
 .day {
     padding-left: 2%;
     font-size: 30px;
-    width: 13%;
+    width: 15%;
     position: absolute;
-    border-right: 3px solid whitesmoke;
-}
-
-.month-year {
-    margin-left: 20%;
+    border-right: 0.5px solid #0b0c48;
+    font-weight: 800;
 }
 
 .verse-meditation {
-    height: 30%;
     color: whitesmoke;
     background: url('../../assets/banner-meditacao.png') center no-repeat;
     background-size: cover;
     text-align: center;
+    font-size: 19px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
-.label {
-    padding-top: 2%;
-    height: 15%;
+.verse-meditation div:nth-child(2) {
+    width: 60%;
+    margin-left: 20%;
+    padding-bottom: 5%;
 }
 
-.verse {
-    margin-top: 5%;
-    height: 55%;
+.title-audio {
+    background: #242a3a;
+    padding: 5%;
+    color: whitesmoke;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
-.more-options {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;   
+.title-audio span:first-child {
+    font-size: 22px;
 }
 
-.audio-messages {
-    height: 19%;
+.title-audio div:last-child {
+    font-size: 30px;
+}
+
+.audio-back {
     background: url('../../assets/banner-audio-message-no-text.png') center no-repeat;
     background-size: cover;
+}
+
+.audio-message {
+    color: whitesmoke;
+    font-size: 17px;
     text-align: right;
 }
 
-.audio-message-title {
-    font-size: 20px;
-    color: #4299d0;
-    margin-right: 2%;
-    height: 40%;
-}
-
-.audio-message-text {
-    width: 60%;
-    float: right;
-    color: whitesmoke;
-    font-size: 14px;
-    margin-right: 2%;
-}
-
-.last-messages {
-    height: 22%;
-    background: #00082c;
-    text-align: center;
-}
-
-.last-messages-title {
-    color: #972344;
-    font-weight: 600;
-    padding-top: 2%;
-}
-
-.message {
-    color: whitesmoke;
-    font-size: 12px;
-    padding-top: 2%;
-}
-
-.see-more {
-    text-align: right;
-    margin-right: 2%;
-    color: whitesmoke;
-    font-size: 15px;
-}
-
-.social-networks {
-    height: 11%;
-    background: url('../../assets/banner-meditacao.png') center no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-networks-container {
-    color: whitesmoke;
-    width: 65%;
-    padding: 0px 10px 10px 10px;
-    background: #ab2c32;
-    position: absolute;
-    bottom: 0;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.title-social-networks {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 18px;
+.btn {
+    margin-bottom: 7%;
 }
