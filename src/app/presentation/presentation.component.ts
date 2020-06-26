@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Pregacao } from '../pregacao-audio/pregacao.model';
 import * as firebase from 'firebase';
 import { Router } from '@angular/router';
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./presentation.component.css']
 })
 export class PresentationComponent {
+
+  @ViewChild('meditationText') meditationText: ElementRef<HTMLDivElement>;
 
   dayName: string;
   day: number;
@@ -86,5 +88,10 @@ export class PresentationComponent {
 
   redirectToAudioMessages(): void {
     this.router.navigateByUrl('/home/pregacao');
+  }
+
+  shareMeditationText(): void {
+    const text = this.meditationText.nativeElement.textContent;
+    window.open('https://api.whatsapp.com/send?text=' + text);
   }
 }

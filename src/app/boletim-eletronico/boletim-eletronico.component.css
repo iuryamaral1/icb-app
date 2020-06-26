@@ -1,9 +1,89 @@
 @media only screen and (max-width: 700px) {
     
     .background {
-        width: 100%;
-        height: 100%;
-        background: #050559;
+        background: -webkit-linear-gradient(#691743, #080d66);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 22px;
+        font-weight: bold;
+        padding-left: 5%;
+        padding-top: 20%;
+        padding-bottom: 2%;
     }
 
+    .background div:first-child {
+        line-height: 10px;
+    }
+
+    .background div:first-child > div:nth-child(2) {
+        font-size: 40px;
+    }
+
+    .background div:nth-child(2) {
+        line-height: 40px;
+    }
+
+    .background div:nth-child(2) > div:first-child {
+        font-size: 30px;
+    }
+
+    .background div:nth-child(2) > div:last-child {
+        font-size: 20px;
+        float: right;
+    }
+
+    .pastor-message {
+        background: #f3f3f3;
+        color: #868686; 
+    }
+
+    .title-message {
+        border-bottom: 3px ridge;
+        margin-left: 20%;
+        width: 60%;
+    }
+
+    .boletim {
+        background: url('../../assets/banner-meditacao.png') center no-repeat;
+        background-size: cover;
+        padding-top: 10%;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
+    .preview-message {
+        background: radial-gradient(#ffffff, #f0ecec );
+        padding: 5%;
+        width: 90%;
+        margin-left: 5%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+
+    .message-info {
+        font-size: 12px;
+    }
+
+    .message-info span {
+        color: rgb(26, 7, 59);
+    }
+
+    .message-info button {
+        background: red;
+        color: whitesmoke;
+        border-radius: 15px;
+        border: 0px;
+        width: 80px;
+    }
+
+    .icons > div {
+        width: 33%;
+        float: left;
+        padding: 2%;
+        font-size: 15px;
+    }
+    
+    .divider {
+        border-top: 1px ridge;
+    }
 }

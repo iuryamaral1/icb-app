@@ -2,10 +2,9 @@
     
     .library {
         width: 100%;
-        height: 94%;
-        background: url('../../assets/back-biblioteca.png') center no-repeat;
-        background-size: cover;
+        background: #f2f4f5;
         overflow: hidden;
+        padding-top: 20%;
     }
 
     .back-button {
@@ -13,22 +12,22 @@
     }
 
     .search {
-        color: whitesmoke;
+        color: black;
         text-align: center;
         padding-top: 2%;
         padding-bottom: 2%;
     }
 
     .search input {
-        border-radius: 15px;
         margin-right: 2%;
+        height: 35px;
     }
     
     .audio {
         width: 100%;
         height: 12%;
-        color: whitesmoke;
-        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .1);
+        color: black;
+        box-shadow: inset 0 0 2000px rgba(117, 117, 117, 0.1);
         padding: 1%;
     }
 
