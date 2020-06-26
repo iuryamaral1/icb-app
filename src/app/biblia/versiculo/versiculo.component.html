@@ -1,3 +1,3 @@
-<div [ngClass]="isSelected ? 'selected' : ''" (click)="onSelect()">
-  {{ verse.number }} {{ verse.text }}
+<div class="verse" [ngClass]="isSelected ? 'selected' : ''" (click)="onSelect()">
+  {{ verse.number }}. {{ verse.text }}
 </div>
