@@ -26,6 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { BoletimEletronicoComponent } from './boletim-eletronico/boletim-eletronico.component';
 import { VersionNamePipe } from './pipes/version-name.pipe';
 import { VersiculoComponent } from './biblia/versiculo/versiculo.component';
+import { BoletimService } from './services/boletim-service.service';
+import { MonthNamePipe } from './pipes/mes-pipe.pipe';
+import { DayNamePipe } from './pipes/day-pipe.pipe';
+import { BoletimMensagemComponent } from './boletim-mensagem/boletim-mensagem.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,10 @@ import { VersiculoComponent } from './biblia/versiculo/versiculo.component';
     PregacaoReproducaoComponent,
     BoletimEletronicoComponent,
     VersiculoComponent,
-    VersionNamePipe
+    VersionNamePipe,
+    MonthNamePipe,
+    DayNamePipe,
+    BoletimMensagemComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,10 @@ import { VersiculoComponent } from './biblia/versiculo/versiculo.component';
     RouterModule.forRoot(routes),
     HttpClientModule
   ],
-  providers: [AuthService, PregacaoService],
+  providers: [AuthService,
+              PregacaoService,
+              BoletimService,
+             ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

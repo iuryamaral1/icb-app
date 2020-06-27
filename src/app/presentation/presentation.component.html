@@ -5,10 +5,10 @@
       <div>Bem-Vindo!</div>
     </div>
     <div class="hour-info">
-      <div class="today">Hoje é {{ dayName }},</div>
+      <div class="today">Hoje é {{ dayName | dayPipe }},</div>
       <div class="day">{{ day }}</div>
       <div class="month-year">
-        <div>{{ month }}</div>
+        <div>{{ month | monthName }}</div>
         <div>{{ year }}</div>
       </div>
     </div>
@@ -20,7 +20,11 @@
     </div>
     <div class="pull-right pr-5 pb-3" (click)="shareMeditationText()">Compartilhar <span class="fa fa-share-alt-square"></span></div>
   </div>
-  <div class="col-sm mt-3 w-100 h-100 title-audio">
+  <div (click)="redirectToBoletim()" class="d-flex justify-content-between w-100 mt-1 mb-1 p-3 btn-boletim">
+    <span>Acessar o Boletim Digital</span>
+    <span class="fa fa-arrow-right"></span>
+  </div>
+  <div class="col-sm w-100 h-100 title-audio">
     <div>
       <span class="pr-2 font-weight-bold">Áudios</span>
       <span>que</span>

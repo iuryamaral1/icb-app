@@ -10,6 +10,7 @@ import { PresentationComponent } from './presentation/presentation.component';
 import { PregacaoReproducaoComponent } from './pregacao-reproducao/pregacao-reproducao.component';
 import { BoletimEletronicoComponent } from './boletim-eletronico/boletim-eletronico.component';
 import { BibliaComponent } from './biblia/biblia.component';
+import { BoletimMensagemComponent } from './boletim-mensagem/boletim-mensagem.component';
 
 export const routes: Routes = [
     {
@@ -41,6 +42,9 @@ export const routes: Routes = [
                 canActivate: [AuthGuard]
             }, {
                 path: 'biblia', component: BibliaComponent,
+                canActivate: [AuthGuard]
+            }, {
+                path: 'boletim-mensagem', component: BoletimMensagemComponent,
                 canActivate: [AuthGuard]
             }
         ]

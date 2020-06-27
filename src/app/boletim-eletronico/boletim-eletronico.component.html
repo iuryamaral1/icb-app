@@ -4,8 +4,8 @@
         <div>Digital <span class="fa fa-book"></span></div>
     </div>
     <div class="pr-4">
-        <div>Julho</div>
-        <div>2020</div>
+        <div>{{ boletim.month | monthName }}</div>
+        <div>{{ boletim.year }}</div>
     </div>
 </div>
 <div class="d-flex justify-content-center align-items-center pastor-message">
@@ -13,13 +13,13 @@
 </div>
 <div class="boletim">
     <div class="preview-message">
-        <div class="text-center font-weight-bold title-message">Qual a tua petição?</div>
+        <div class="text-center font-weight-bold title-message">{{ boletim.title_message }}</div>
         <div class="pt-2 text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales semper urna ut pharetra. Morbi facilisis vel ipsum eget euismod.
+            {{ boletim.preview_message }}
         </div>
         <div class="d-flex justify-content-between align-items-center message-info">
             <span class="font-weight-bold">Autor: Pr. Joaquim do Amaral</span>
-            <button>Ver mais</button>
+            <button (click)="redirectToMessage()">Ver mais</button>
         </div>
     </div>
 </div>

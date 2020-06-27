@@ -12,16 +12,16 @@ export class PresentationComponent {
 
   @ViewChild('meditationText') meditationText: ElementRef<HTMLDivElement>;
 
-  dayName: string;
+  dayName: number;
   day: number;
-  month: string;
+  month: number;
   year: number;
   pregacoes: Array<Pregacao> = new Array<Pregacao>();
 
   constructor(public router: Router) { 
-    this.dayName = this.getDayName(new Date().getDay());
+    this.dayName = new Date().getDay();
     this.day = new Date().getUTCDate();
-    this.month = this.getMonthName(new Date().getMonth());
+    this.month = new Date().getMonth();
     this.year = new Date().getFullYear();
 
     const storage = firebase.storage();
@@ -38,54 +38,6 @@ export class PresentationComponent {
     });
   }
 
-  getDayName(value: number): string {
-    switch (value) {
-      case 0:
-        return 'Domingo';
-      case 1:
-        return 'Segunda-feira';
-      case 2:
-        return 'Terça-feira';
-      case 3:
-        return 'Quarta-feira';
-      case 4:
-        return 'Quinta-feira';
-      case 5:
-        return 'Sexta-feira';
-      case 6:
-        return 'Sábado';
-    }
-  }
-
-  getMonthName(value: number): string {
-    switch (value) {
-      case 0:
-        return 'JANEIRO';
-      case 1:
-        return 'FEVEREIRO';
-      case 2:
-        return 'MARÇO';
-      case 3:
-        return 'ABRIL';
-      case 4:
-        return 'MAIO';
-      case 5:
-        return 'JUNHO';
-      case 6:
-        return 'JULHO';
-      case 7:
-        return 'AGOSTO';
-      case 8:
-        return 'SETEMBRO';
-      case 9:
-        return 'OUTUBRO';
-      case 10:
-        return 'NOVEMBRO';
-      case 11:
-        return 'DEZEMBRO';
-    }
-  }
-
   redirectToAudioMessages(): void {
     this.router.navigateByUrl('/home/pregacao');
   }
@@ -93,5 +45,9 @@ export class PresentationComponent {
   shareMeditationText(): void {
     const text = this.meditationText.nativeElement.textContent;
     window.open('https://api.whatsapp.com/send?text=' + text);
+  }
+
+  redirectToBoletim(): void {
+    this.router.navigateByUrl('/home/boletim-eletronico');
   }
 }

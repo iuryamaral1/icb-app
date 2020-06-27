@@ -46,7 +46,7 @@
     background: url('../../assets/banner-meditacao.png') center no-repeat;
     background-size: cover;
     text-align: center;
-    font-size: 19px;
+    font-size: 15px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
@@ -86,4 +86,10 @@
 
 .btn {
     margin-bottom: 7%;
+}
+
+.btn-boletim {
+    background: #04075c;
+    color: whitesmoke;
+    border-radius: 25px;
 }

@@ -1,0 +1,52 @@
+.row {
+    padding-top: 17%;
+}
+
+.title {
+    background: url('../../assets/banner-meditacao.png') center no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    z-index: 1;
+    position: absolute;
+}
+
+.title > .circle {
+    border-radius: 50%;
+    width: 80px;
+    background: #ffffff;
+    height: 80px;
+}
+
+.circle > img {
+    width: 50px!important;
+    height: 50px!important;
+    margin-top: 15%;
+}
+
+.menu {
+    background: #c1231f;
+    padding-top: 60%;
+    color: whitesmoke;
+}
+
+.menu span {
+    font-size: 20px;
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 25px;
+    background: whitesmoke;
+}
+
+.title-message {
+    width: 60%;
+    color: whitesmoke;
+    font-size: 35px;
+}
+
+.message {
+    max-height: 350px;
+    overflow: auto;
+}

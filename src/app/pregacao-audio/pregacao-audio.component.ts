@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import * as firebase from 'firebase';
 import { Pregacao } from './pregacao.model';
 import { PregacaoService } from '../services/pregacao.service';
 import { Router } from '@angular/router';
@@ -18,9 +17,7 @@ export class PregacaoAudioComponent {
   constructor(private pregacaoService: PregacaoService,
               public router: Router) {
     this.displayLoader();
-    const storage = firebase.storage();
-    const storageRef = storage.ref();
-    storageRef.listAll().then(res => {
+    this.pregacaoService.listarArquivos().then(res => {
       res.items.forEach(item => {
         let pregacao = new Pregacao();
         item.getDownloadURL().then(res => {

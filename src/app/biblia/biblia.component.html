@@ -18,7 +18,7 @@
     <div class="share-verse" [ngClass]="displayShareOption() ? 'displayShareOption' : 'hideShareOption'">
       <div>Compartilhar via: <span class="fa fa-whatsapp whatsapp" (click)="shareSelectedVerses()"></span></div>
     </div>
-    <div class="verses">
+    <div class="verses pb-5">
       <div *ngFor="let verse of verses">
         <app-versiculo [verse]="verse" (click)="onSelectVerse(verse)"></app-versiculo>
       </div>
