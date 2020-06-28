@@ -1,38 +1,38 @@
 {
-    "short_name": "Weather",
-    "name": "Weather: Do I need an umbrella?",
-    "description": "Weather forecast information",
+    "short_name": "ICBApp",
+    "name": "A Igreja de Cristo no seu bolso",
+    "description": "Informações de avisos gerais da Igreja, escalas de cultos e aniversariantes. O App também possui uma Bíblia Online em várias versões e pregações em áudio dos cultos.",
     "icons": [
       {
-        "src": "/images/icbplay.png",
+        "src": "/images/icb_192X192.png",
         "type": "image/png",
-        "sizes": "192x192"
+        "sizes": "461x461"
       },
       {
-        "src": "/images/icons-512.png",
+        "src": "/images/icb_512X512.png",
         "type": "image/png",
-        "sizes": "512x512"
+        "sizes": "1229x1229"
       }
     ],
-    "start_url": "/?source=pwa",
-    "background_color": "#3367D6",
+    "start_url": "/",
+    "background_color": "#f8f9fa",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#3367D6",
+    "theme_color": "#f8f9fa",
     "shortcuts": [
       {
-        "name": "How's weather today?",
-        "short_name": "Today",
-        "description": "View weather information for today",
-        "url": "/today?source=pwa",
-        "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
+        "name": "ICB App",
+        "short_name": "ICBApp",
+        "description": "Veja informações de boletim da ICB Campina",
+        "url": "/home/boletim-eletronico",
+        "icons": [{ "src": "/images/icb_192X192.png", "sizes": "461x461" }]
       },
       {
-        "name": "How's weather tomorrow?",
-        "short_name": "Tomorrow",
-        "description": "View weather information for tomorrow",
-        "url": "/tomorrow?source=pwa",
-        "icons": [{ "src": "/images/tomorrow.png", "sizes": "192x192" }]
+        "name": "Mensagens edificantes",
+        "short_name": "Pregações",
+        "description": "Áudios que edificam a alma",
+        "url": "/home/pregacao",
+        "icons": [{ "src": "/images/icb_192X192.png", "sizes": "461x461" }]
       }
     ]
   }

@@ -18,7 +18,7 @@ export class PresentationComponent {
   year: number;
   pregacoes: Array<Pregacao> = new Array<Pregacao>();
 
-  constructor(public router: Router) { 
+  constructor(public router: Router) {
     this.dayName = new Date().getDay();
     this.day = new Date().getUTCDate();
     this.month = new Date().getMonth();
