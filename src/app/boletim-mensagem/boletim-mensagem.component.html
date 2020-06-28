@@ -7,11 +7,11 @@
   <div class="menu d-flex justify-content-between w-100 pb-3 pl-3 pr-3">
     <div>
       <span class="fa fa-reply pr-3"></span>
-      <span>Voltar</span>
+      <a [routerLink]="['/home/boletim-eletronico']"><span>Voltar</span></a>
     </div>
     <div class="vertical-divider ml-5">
     </div>
-    <div>
+    <div class="share" (click)="shareMessageViaWhatsapp()">
       <span>Compartilhar</span>
       <span class="fa fa-share-alt-square pl-3"></span>
     </div>

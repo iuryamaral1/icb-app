@@ -50,3 +50,16 @@
     max-height: 350px;
     overflow: auto;
 }
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.share:active:after { 
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+    
+}

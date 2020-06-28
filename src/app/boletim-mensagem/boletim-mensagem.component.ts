@@ -17,4 +17,11 @@ export class BoletimMensagemComponent implements OnInit {
         .subscribe(boletim => this.boletim = boletim);
   }
 
+  shareMessageViaWhatsapp(): void {
+    let message = this.boletim.title_message + '\n';
+    message = message.concat(this.boletim.message + '\n\n');
+    message = message.concat('Autor: Pr. Joaquim Amaral' + '\n');
+
+    window.open('https://api.whatsapp.com/send?text=' + message);
+  }
 }
