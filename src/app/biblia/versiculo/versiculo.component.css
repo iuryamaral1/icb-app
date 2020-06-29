@@ -3,3 +3,8 @@
     background: #999;
     color: black;
 }
+
+.verse {
+    margin-bottom: 10px;
+    text-align: justify;
+}
