@@ -119,6 +119,11 @@ a {
     }
 
     .sign {
-        margin: 50px auto;
+        margin: 35px auto;
+    }
+
+    .btn-download {
+        color: whitesmoke;
+        font-size: 20px;
     }
 }

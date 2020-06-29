@@ -30,6 +30,7 @@ import { BoletimService } from './services/boletim-service.service';
 import { MonthNamePipe } from './pipes/mes-pipe.pipe';
 import { DayNamePipe } from './pipes/day-pipe.pipe';
 import { BoletimMensagemComponent } from './boletim-mensagem/boletim-mensagem.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { BoletimMensagemComponent } from './boletim-mensagem/boletim-mensagem.co
     AngularFireAuthModule,
     AngularFontAwesomeModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [AuthService,
               PregacaoService,
