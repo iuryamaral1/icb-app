@@ -46,7 +46,7 @@
     background: url('../../assets/banner-meditacao.png') center no-repeat;
     background-size: cover;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
@@ -59,29 +59,22 @@
 
 .title-audio {
     background: #242a3a;
-    padding: 5%;
+    padding: 3%;
     color: whitesmoke;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
 
 .title-audio span:first-child {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .title-audio div:last-child {
-    font-size: 30px;
-}
-
-.audio-back {
-    background: url('../../assets/banner-audio-message-no-text.png') center no-repeat;
-    background-size: cover;
+    font-size: 25px;
 }
 
 .audio-message {
-    color: whitesmoke;
     font-size: 17px;
-    text-align: right;
 }
 
 .btn {
@@ -91,5 +84,13 @@
 .btn-boletim {
     background: #04075c;
     color: whitesmoke;
-    border-radius: 25px;
+    border-radius: 21px;
+}
+
+.btn-boletim div:first-child {
+    font-size: 20px;
+}
+
+.btn-boletim div:last-child {
+    font-size: 27px;
 }
