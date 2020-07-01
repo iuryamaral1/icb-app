@@ -1,0 +1,23 @@
+<div class="background">
+  <div class="header d-flex justify-content-between pl-3 pr-3">
+    <div class="notices-icon">
+      <img src="../../assets/avisos-icone.png" width="50" alt="Avisos Ícone" />
+      <span class="notices-label">Avisos</span>
+    </div>
+    <div class="month-year text-right">
+      <div class="month">
+        {{ boletim.month | monthName }}
+      </div>
+      <div>
+        {{ boletim.year }}
+      </div>
+    </div>
+  </div>
+  <div class="notices">
+    <!-- <div *ngFor="let notice of boletim.avisos">
+      <div class="notice-card">
+        {{ notice }}
+      </div>
+    </div> -->
+  </div>
+</div>

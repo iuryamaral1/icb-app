@@ -13,6 +13,7 @@ import { BibliaComponent } from './biblia/biblia.component';
 import { BoletimMensagemComponent } from './boletim-mensagem/boletim-mensagem.component';
 import { RegisterComponent } from './register/register.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { BoletimAvisosComponent } from './boletim-avisos/boletim-avisos.component';
 
 export const routes: Routes = [
     {
@@ -50,6 +51,9 @@ export const routes: Routes = [
                 canActivate: [AuthGuard]
             }, {
                 path: 'boletim-mensagem', component: BoletimMensagemComponent,
+                canActivate: [AuthGuard]
+            }, {
+                path: 'boletim-avisos', component: BoletimAvisosComponent,
                 canActivate: [AuthGuard]
             }
         ]

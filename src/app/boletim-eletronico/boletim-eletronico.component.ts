@@ -29,4 +29,9 @@ export class BoletimEletronicoComponent extends AbstractService {
     this.boletimService.shareMessageBetweenSiblingComponents(this.boletim);
     this.router.navigateByUrl('/home/boletim-mensagem');
   }
+
+  redirectToNotices(): void {
+    this.boletimService.shareMessageBetweenSiblingComponents(this.boletim);
+    this.router.navigateByUrl('/home/boletim-avisos');
+  }
 }

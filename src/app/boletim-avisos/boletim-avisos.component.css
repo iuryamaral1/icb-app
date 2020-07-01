@@ -1,0 +1,32 @@
+.background {
+    background: #f8f9fa!important;
+}
+
+.header {
+    padding-top: 20%;
+    background: #ffffff;
+    border-bottom: 2px ridge #c1231f;
+}
+
+.month {
+    font-size: 27px;
+    font-weight: bolder;
+}
+
+.notices-label {
+    font-size: 32px;
+}
+
+.month-year {
+    line-height: 1;
+}
+
+.notices {
+    padding: 2%;
+}
+
+.notice-card {
+    padding: 2%;
+    background: #f8f9fa!important;
+    border-radius: 5px;
+}

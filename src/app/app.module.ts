@@ -34,6 +34,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { RegisterComponent } from './register/register.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { UserService } from './services/user.service';
+import { BoletimAvisosComponent } from './boletim-avisos/boletim-avisos.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { UserService } from './services/user.service';
     BoletimMensagemComponent,
     RegisterComponent,
     VerifyEmailComponent,
+    BoletimAvisosComponent,
   ],
   imports: [
     BrowserModule,
