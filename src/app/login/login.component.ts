@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Router} from '@angular/router';
+import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,9 @@ import { Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  email: string;
+  password: string;
 
   defferedPrompt: any = null;
 
@@ -25,15 +29,35 @@ export class LoginComponent implements OnInit {
   loginWithGoogle(): void {
     this.authService.loginWithGoogle()
         .then(res => {
-          if (res) {
-            const user = res.user;
-            localStorage.setItem('userPui', JSON.stringify(user));
-            this.router.navigateByUrl('home');
-          }
+          this.router.navigateByUrl('home');
         }).catch(err => {
             alert('Não foi possível fazer login! Tente novamente');
             this.router.navigateByUrl('login');
         });
+  }
+
+  login(): void {
+    if (!this.email || !this.password) {
+      alert('Por favor, preencha os campos corretamente');
+      return;
+    } else {
+      this.email = this.email.trim();
+    }
+
+    this.authService.loginWithEmailPassword(this.email, this.password)
+      .then(res => {
+        console.log(res);
+        const user = this.authService.getUser();
+        if (!user.emailVerified) {
+          this.router.navigateByUrl('verificar-email');
+        } else {
+          this.router.navigateByUrl('home');
+        }
+      }).catch(err => {
+        if (err.code === 'auth/wrong-password') {
+          alert('A senha está errada');
+        }
+      });
   }
 
   download(): void {

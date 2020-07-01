@@ -1,0 +1,23 @@
+<div class="main">
+  <div class="sign"></div>
+  <div class="text-center">
+    <div>
+      <input class="un" type="text" align="center" placeholder="Email" [(ngModel)]="email" />
+    </div>
+    <div>
+      <input class="un" type="password" align="center" [(ngModel)]="password" placeholder="Senha" />
+    </div>
+    <div>
+      <input class="un" type="password" [(ngModel)]="confirmPassword" align="center" placeholder="Confirmar Senha" />
+    </div>
+    <div>
+      <input class="un" type="text" [(ngModel)]="name" align="center" placeholder="Digite seu nome" />
+    </div>
+    <div>
+      <button class="btn btn-primary" (click)="register()">Cadastrar</button>
+    </div>
+    <div>
+      <a [routerLink]="['/login']">Voltar</a>
+    </div>
+  </div>
+</div> 
