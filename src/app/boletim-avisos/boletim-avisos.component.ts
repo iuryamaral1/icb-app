@@ -13,7 +13,10 @@ export class BoletimAvisosComponent {
   constructor(public boletimService: BoletimService) {
     this.boletimService.currentBoletim.subscribe(res => {
       this.boletim = res;
-      console.log(this.boletim)
+      console.log(this.boletim.avisos);
+      for (let aviso in this.boletim.avisos) {
+        console.log(aviso.mensagem);
+      }
     });
   }
 

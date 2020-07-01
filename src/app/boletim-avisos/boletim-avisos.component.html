@@ -14,10 +14,10 @@
     </div>
   </div>
   <div class="notices">
-    <!-- <div *ngFor="let notice of boletim.avisos">
-      <div class="notice-card">
-        {{ notice }}
+    <div *ngFor="let notice of boletim.avisos">
+      <div class="notice-card text-justify m-1">
+        {{ notice['mensagem'] }}
       </div>
-    </div> -->
+    </div>
   </div>
 </div>
