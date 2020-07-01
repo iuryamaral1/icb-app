@@ -16,8 +16,6 @@ export class HomeComponent {
 
   constructor(private authService: AuthService,
               public router: Router) {
-
-    this.user = JSON.parse(this.authService.getUser());
   }
 
   logout(): void {

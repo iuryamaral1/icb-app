@@ -20,9 +20,9 @@
     </div>
     <div class="pull-right pr-5 pb-3" (click)="shareMeditationText()">Compartilhar <span class="fa fa-share-alt-square"></span></div>
   </div>
-  <div (click)="redirectToBoletim()" class="d-flex justify-content-between w-100 mt-1 mb-1 p-3 btn-boletim">
-    <span>Acessar o Boletim Digital</span>
-    <span class="fa fa-arrow-right"></span>
+  <div (click)="redirectToBoletim()" class=" w-100 mt-1 mb-1 p-2 btn-boletim text-center">
+    <div>Boletim</div>
+    <div>Digital <span class="fa fa-share"></span></div>
   </div>
   <div class="col-sm w-100 h-100 title-audio">
     <div>
@@ -31,12 +31,16 @@
     </div>
     <div class="font-weight-bold"><span class="fa fa-headphones"></span> Edificam</div>
   </div>
-  <div class="col-sm audio-back">
-    <div class="w-50 pull-right pr-2 audio-message">
-      <span>
-        Pregações em áudio e reflexões para ouvir e compartilhar a Palavra de Deus
-      </span>
-      <button [routerLink]="['pregacao']" class="btn btn-danger">Ver mais</button>
+  <div class="col-sm audio-back mt-3">
+    <div class="w-100 d-flex justify-content-between align-items-center pull-right pr-2 audio-message">
+      <div class="ml-2">
+        <div>Pregações e reflexões.</div>
+        <div>Compartilhe.</div>
+        <div>Ouça.</div>
+      </div>
+      <div>
+        <button [routerLink]="['pregacao']" class="btn btn-danger"><span class="fa fa-headphones"></span> Ouvir</button>
+      </div>
     </div>
   </div>
 </div>

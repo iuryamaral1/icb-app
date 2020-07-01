@@ -1,0 +1,13 @@
+.card {
+    background: #040542;
+    padding-top: 10%;
+}
+
+.card-body {
+    color: whitesmoke;
+    padding-bottom: 30%;
+}
+
+.icon-icb {
+    width: 30%!important;
+}

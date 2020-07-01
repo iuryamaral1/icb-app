@@ -31,6 +31,9 @@ import { MonthNamePipe } from './pipes/mes-pipe.pipe';
 import { DayNamePipe } from './pipes/day-pipe.pipe';
 import { BoletimMensagemComponent } from './boletim-mensagem/boletim-mensagem.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { RegisterComponent } from './register/register.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     MonthNamePipe,
     DayNamePipe,
     BoletimMensagemComponent,
+    RegisterComponent,
+    VerifyEmailComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +69,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   providers: [AuthService,
               PregacaoService,
               BoletimService,
+              UserService,
              ],
   bootstrap: [AppComponent]
 })
