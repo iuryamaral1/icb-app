@@ -11,6 +11,8 @@ import { PregacaoReproducaoComponent } from './pregacao-reproducao/pregacao-repr
 import { BoletimEletronicoComponent } from './boletim-eletronico/boletim-eletronico.component';
 import { BibliaComponent } from './biblia/biblia.component';
 import { BoletimMensagemComponent } from './boletim-mensagem/boletim-mensagem.component';
+import { RegisterComponent } from './register/register.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 export const routes: Routes = [
     {
@@ -18,8 +20,11 @@ export const routes: Routes = [
     },
     {
         path: 'login', component: LoginComponent
-    },
-    {
+    }, {
+        path: 'cadastro', component: RegisterComponent
+    }, {
+        path: 'verificar-email', component: VerifyEmailComponent
+    }, {
         path: 'home', component: HomeComponent,
         canActivate: [AuthGuard],
         children: [
