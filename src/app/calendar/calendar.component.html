@@ -1,0 +1,17 @@
+<div class="calendar p-2">
+    <div class="d-flex justify-content-around align-items-center">
+        <span class="fa fa-chevron-left" (click)="onPreviousMonthClick()"></span>
+        <span>
+            {{ calendar.currentMonth | monthName }}
+        </span>
+        <span class="fa fa-chevron-right" (click)="onNextMonthClick()"></span>
+    </div>
+    <div class="d-flex justify-content-around align-items-center pt-1">
+        <span *ngFor="let day of calendar.weekDays">
+            {{ day }}
+        </span>
+    </div>
+    <div *ngFor="let">
+
+    </div>
+</div>

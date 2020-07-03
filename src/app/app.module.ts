@@ -35,6 +35,8 @@ import { RegisterComponent } from './register/register.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { UserService } from './services/user.service';
 import { BoletimAvisosComponent } from './boletim-avisos/boletim-avisos.component';
+import { BoletimCultosComponent } from './boletim-cultos/boletim-cultos.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { BoletimAvisosComponent } from './boletim-avisos/boletim-avisos.componen
     RegisterComponent,
     VerifyEmailComponent,
     BoletimAvisosComponent,
+    BoletimCultosComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,

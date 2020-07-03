@@ -19,13 +19,13 @@
         </div>
         <div class="d-flex justify-content-between align-items-center message-info">
             <span class="font-weight-bold">Autor: Pr. Joaquim do Amaral</span>
-            <button (click)="redirectToMessage()">Ver mais</button>
+            <button (click)="redirectTo('boletim-mensagem')">Ver mais</button>
         </div>
     </div>
 </div>
 <div class="icons p-4">
     <div class="text-center border-right mb-2">
-        <div class="pb-3" (click)="redirectToNotices()">
+        <div class="pb-3" (click)="redirectTo('boletim-avisos')">
             <img src="../../assets/avisos-icone.png" alt="Avisos" width="40" />
         </div>
         <div>
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="text-center border-right">
-        <div class="pb-2">
+        <div class="pb-2" (click)="redirectTo('boletim-cultos')">
             <img src="../../assets/escala-culto.png" alt="Escala Cultos" width="40" />
         </div>
         <div>

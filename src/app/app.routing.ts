@@ -14,6 +14,7 @@ import { BoletimMensagemComponent } from './boletim-mensagem/boletim-mensagem.co
 import { RegisterComponent } from './register/register.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { BoletimAvisosComponent } from './boletim-avisos/boletim-avisos.component';
+import { BoletimCultosComponent } from './boletim-cultos/boletim-cultos.component';
 
 export const routes: Routes = [
     {
@@ -27,7 +28,6 @@ export const routes: Routes = [
         path: 'verificar-email', component: VerifyEmailComponent
     }, {
         path: 'home', component: HomeComponent,
-        canActivate: [AuthGuard],
         children: [
             {
                 path: '', component: PresentationComponent
@@ -45,7 +45,7 @@ export const routes: Routes = [
                 canActivate: [AuthGuard]
             }, {
                 path: 'boletim-eletronico', component: BoletimEletronicoComponent,
-                canActivate: [AuthGuard]
+                
             }, {
                 path: 'biblia', component: BibliaComponent,
                 canActivate: [AuthGuard]
@@ -55,6 +55,8 @@ export const routes: Routes = [
             }, {
                 path: 'boletim-avisos', component: BoletimAvisosComponent,
                 canActivate: [AuthGuard]
+            }, {
+                path: 'boletim-cultos', component: BoletimCultosComponent
             }
         ]
     }
