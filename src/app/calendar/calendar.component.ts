@@ -1,6 +1,8 @@
 import { Output, EventEmitter } from "@angular/core";
 import { Calendar } from "./calendar.model";
 import { Component } from '@angular/core';
+import { Day } from "./day.model";
+import * as moment from 'moment';
 
 @Component({
     selector: 'app-calendar',
@@ -17,10 +19,18 @@ export class CalendarComponent {
     constructor() { }
 
     onPreviousMonthClick(): void {
+        this.calendar = new Calendar(this.calendar.currentMonth - 1);
         this.previousMonthClickEvent.emit();
     }
 
-    onNextMonthClickEvent(): void {
+    onNextMonthClick(): void {
+        this.calendar = new Calendar(this.calendar.currentMonth + 1);
         this.nextMonthClickEvent.emit();
+    }
+
+    onDayClick(day: Day): void {
+        if (day.isClickable) {
+            console.log('Mostrar eventos do dia: ' + day.value + ' do mês ' + (this.calendar.currentMonth + 1));
+        }
     }
 }

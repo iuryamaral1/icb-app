@@ -11,7 +11,14 @@
             {{ day }}
         </span>
     </div>
-    <div *ngFor="let">
-
+    <div class="days">
+        <span *ngFor="let day of calendar.daysList; index as i">
+            <span [ngClass]="day.isClickable ? '' : 'disabled'" class="pull-left text-center pt-2" *ngIf="i%7==0 && i != 0" (click)="onDayClick(day)">
+                {{ day.value }}<br/>
+            </span>
+            <span [ngClass]="day.isClickable ? '' : 'disabled'" class="pull-left text-center pt-2" *ngIf="i%7!=0 || i == 0" (click)="onDayClick(day)">
+                {{ day.value }}
+            </span>
+        </span>
     </div>
 </div>

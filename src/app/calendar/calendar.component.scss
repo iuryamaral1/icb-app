@@ -2,4 +2,13 @@
 .calendar {
     background: #09136d;
     color: whitesmoke;
+    height: 250px;
+}
+
+.days span {
+    width: 14%;
+} 
+
+.disabled {
+    color: #777777;
 }
