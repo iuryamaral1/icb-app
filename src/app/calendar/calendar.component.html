@@ -2,7 +2,7 @@
     <div class="d-flex justify-content-around align-items-center">
         <span class="fa fa-chevron-left" (click)="onPreviousMonthClick()"></span>
         <span>
-            {{ calendar.currentMonth | monthName }}
+            {{ calendar.currentMonth | monthName }} - {{ calendar.currentYear }}
         </span>
         <span class="fa fa-chevron-right" (click)="onNextMonthClick()"></span>
     </div>
@@ -13,10 +13,10 @@
     </div>
     <div class="days">
         <span *ngFor="let day of calendar.daysList; index as i">
-            <span [ngClass]="day.isClickable ? '' : 'disabled'" class="pull-left text-center pt-2" *ngIf="i%7==0 && i != 0" (click)="onDayClick(day)">
+            <span [ngClass]="[day.isClickable ? '' : 'disabled', isToday(day) ? 'today' : '']" class="pull-left text-center pt-2" *ngIf="i%7==0 && i != 0" (click)="onDayClick(day)">
                 {{ day.value }}<br/>
             </span>
-            <span [ngClass]="day.isClickable ? '' : 'disabled'" class="pull-left text-center pt-2" *ngIf="i%7!=0 || i == 0" (click)="onDayClick(day)">
+            <span [ngClass]="[day.isClickable ? '' : 'disabled', isToday(day) ? 'today' : '']" class="pull-left text-center pt-2" *ngIf="i%7!=0 || i == 0" (click)="onDayClick(day)">
                 {{ day.value }}
             </span>
         </span>

@@ -1,7 +1,7 @@
-import { Output, EventEmitter } from "@angular/core";
-import { Calendar } from "./calendar.model";
+import { Output, EventEmitter } from '@angular/core';
+import { Calendar } from './calendar.model';
 import { Component } from '@angular/core';
-import { Day } from "./day.model";
+import { Day } from './day.model';
 import * as moment from 'moment';
 
 @Component({
@@ -19,12 +19,24 @@ export class CalendarComponent {
     constructor() { }
 
     onPreviousMonthClick(): void {
-        this.calendar = new Calendar(this.calendar.currentMonth - 1);
+        if (this.calendar.currentMonth === 0) {
+            this.calendar.currentMonth = 11;
+            this.calendar.currentYear = this.calendar.currentYear - 1;
+        } else {
+            this.calendar.currentMonth = this.calendar.currentMonth - 1;
+        }
+        this.calendar = new Calendar(this.calendar.currentMonth, this.calendar.currentYear);
         this.previousMonthClickEvent.emit();
     }
 
     onNextMonthClick(): void {
-        this.calendar = new Calendar(this.calendar.currentMonth + 1);
+        if (this.calendar.currentMonth === 11) {
+            this.calendar.currentMonth = 0;
+            this.calendar.currentYear = this.calendar.currentYear + 1;
+        } else {
+            this.calendar.currentMonth = this.calendar.currentMonth + 1;
+        }
+        this.calendar = new Calendar(this.calendar.currentMonth, this.calendar.currentYear);
         this.nextMonthClickEvent.emit();
     }
 
@@ -32,5 +44,14 @@ export class CalendarComponent {
         if (day.isClickable) {
             console.log('Mostrar eventos do dia: ' + day.value + ' do mês ' + (this.calendar.currentMonth + 1));
         }
+    }
+
+    isToday(day: Day): boolean {
+        const dayValue = day.value;
+        const month = this.calendar.currentMonth;
+        const year = this.calendar.currentYear;
+
+        const dateToCompare = new Date(year, month, dayValue);
+        return moment().format('MM-DD-YYYY') === moment(dateToCompare).format('MM-DD-YYYY');
     }
 }
