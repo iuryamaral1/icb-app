@@ -37,17 +37,7 @@ export class PresentationComponent {
       });
     });
   }
-
-  redirectToAudioMessages(): void {
-    this.router.navigateByUrl('/home/pregacao');
-  }
-
-  shareMeditationText(): void {
-    const text = this.meditationText.nativeElement.textContent;
-    window.open('https://api.whatsapp.com/send?text=' + text);
-  }
-
-  redirectToBoletim(): void {
-    this.router.navigateByUrl('/home/boletim-eletronico');
+  redirectTo(path: string): void {
+    this.router.navigateByUrl(`${path}`);
   }
 }

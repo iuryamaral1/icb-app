@@ -1,5 +1,54 @@
 <div class="row no-gutters">
-  <div class="col-sm">
+
+  <div class="row w-100 no-gutters start">
+    <div class="col-9 glass text-center">
+      <div class="col-12 glassy-text d-flex justify-content-between align-items-center">
+        <div class="w-100 d-flex justify-content-around align-items-center">
+          <img src="../../assets/logo_icb.ico" class="circle" />
+          <div>
+            <span class="day">{{ day }}</span>
+            <span class="text-right ml-2">{{ month | monthName }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div class="container apps">
+    <div class="row no-gutters">
+      <div class="col-11 offset-1 text-title text-left">
+        <h5>Aplicações</h5>
+      </div>
+      <div class="col-4 ml-4 mr-1 box lilac-hard" (click)="redirectTo('/home/pregacao')">
+        <span class="fa fa-podcast"></span>
+        <span>Pregação</span>
+      </div>
+      <div class="col-6 mb-2 box lilac-soft" (click)="redirectTo('/home/biblia')">
+        <span class="fa fa-book"></span>
+        <span>Bíblia Sagrada</span>
+      </div>
+      <div class="col-6 mb-2 ml-4 mr-1 box blue-hard" (click)="redirectTo('boletim-eletronico')">
+        <span class="fa fa-bookmark"></span>
+        <span>Boletim Digital</span>
+      </div>
+      <div class="col-4 box blue-soft">
+        <span class="fa fa-calendar"></span>
+        <span>Avisos</span>
+      </div>
+      <div class="col-4 ml-4 mr-1 box lilac-hard">
+        <span class="fa fa-users"></span>
+        <span>Escalas</span>
+      </div>
+      <div class="col-6 mb-2 box blue-hard">
+        <span class="fa fa-birthday-cake"></span>
+        <span>Aniversários</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- <div class="col-sm">
     <div class="welcome h-100 pl-4 pull-left">
       <div>Seja</div>
       <div>Bem-Vindo!</div>
@@ -43,4 +92,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

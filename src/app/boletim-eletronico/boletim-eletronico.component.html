@@ -1,81 +1,81 @@
-<div class="background d-flex justify-content-between align-items-center">
-    <div class="pull-left">
-        <div>Boletim</div>
-        <div>Digital <span class="fa fa-book"></span></div>
-    </div>
-    <div class="pr-4">
-        <div>{{ boletim.month | monthName }}</div>
-        <div>{{ boletim.year }}</div>
-    </div>
-</div>
-<div class="d-flex justify-content-center align-items-center pastor-message">
-    <span>Mensagem pastoral</span>
-</div>
-<div class="boletim">
-    <div class="preview-message">
-        <div class="text-center font-weight-bold title-message">{{ boletim.title_message }}</div>
-        <div class="pt-2 text-justify">
-            {{ boletim.preview_message }}
+    <div class="background d-flex justify-content-between align-items-center">
+        <div class="pull-left">
+            <div>Boletim</div>
+            <div>Digital <span class="fa fa-book"></span></div>
         </div>
-        <div class="d-flex justify-content-between align-items-center message-info">
-            <span class="font-weight-bold">Autor: Pr. Joaquim do Amaral</span>
-            <button (click)="redirectTo('boletim-mensagem')">Ver mais</button>
+        <div class="pr-4">
+            <div>{{ boletim.month | monthName }}</div>
+            <div>{{ boletim.year }}</div>
         </div>
     </div>
-</div>
-<div class="icons p-4">
-    <div class="text-center border-right mb-2">
-        <div class="pb-3" (click)="redirectTo('boletim-avisos')">
-            <img src="../../assets/avisos-icone.png" alt="Avisos" width="40" />
-        </div>
-        <div>
-            <span>Avisos</span>
-        </div>
+    <div class="d-flex justify-content-center align-items-center pastor-message">
+        <span>Mensagem pastoral</span>
     </div>
-    <div class="text-center border-right">
-        <div class="pb-2" (click)="redirectTo('boletim-cultos')">
-            <img src="../../assets/escala-culto.png" alt="Escala Cultos" width="40" />
-        </div>
-        <div>
-            <div>Cultos</div>
-        </div>
-    </div>
-    <div class="text-center">
-        <div class="pb-1">
-            <img src="../../assets/escala-diacono.png" alt="Escala Cultos" width="40" />
-        </div>
-        <div>
-            <span>Diáconos</span>
-        </div>
-    </div>
-    <div class="divider w-100 pb-2"></div>
-    <div class="text-center border-right">
-        <div>
-            <img src="../../assets/escala-depto-infantil.png" alt="Avisos" width="40" />
-        </div>
-        <div>
-            <div>
-                Depto
+    <div class="boletim">
+        <div class="preview-message">
+            <div class="text-center font-weight-bold title-message">{{ boletim.title_message }}</div>
+            <div class="pt-2 text-justify">
+                {{ boletim.preview_message }}
             </div>
-            <div>
-                Infantil
+            <div class="d-flex justify-content-between align-items-center message-info">
+                <span class="font-weight-bold">Autor: Pr. Joaquim do Amaral</span>
+                <button (click)="redirectTo('boletim-mensagem')">Ver mais</button>
             </div>
         </div>
     </div>
-    <div class="text-center border-right">
-        <div>
-            <img src="../../assets/aniversarios.png" alt="Avisos" width="40" />
+    <div class="icons p-4">
+        <div class="text-center border-right mb-2">
+            <div class="pb-3" (click)="redirectTo('boletim-avisos')">
+                <img src="../../assets/avisos-icone.png" alt="Avisos" width="40" />
+            </div>
+            <div>
+                <span>Avisos</span>
+            </div>
         </div>
-        <div>
-            <span>Aniversários</span>
+        <div class="text-center border-right">
+            <div class="pb-2" (click)="redirectTo('boletim-cultos')">
+                <img src="../../assets/escala-culto.png" alt="Escala Cultos" width="40" />
+            </div>
+            <div>
+                <div>Cultos</div>
+            </div>
+        </div>
+        <div class="text-center">
+            <div class="pb-1">
+                <img src="../../assets/escala-diacono.png" alt="Escala Cultos" width="40" />
+            </div>
+            <div>
+                <span>Diáconos</span>
+            </div>
+        </div>
+        <div class="divider w-100 pb-2"></div>
+        <div class="text-center border-right">
+            <div>
+                <img src="../../assets/escala-depto-infantil.png" alt="Avisos" width="40" />
+            </div>
+            <div>
+                <div>
+                    Depto
+                </div>
+                <div>
+                    Infantil
+                </div>
+            </div>
+        </div>
+        <div class="text-center border-right">
+            <div>
+                <img src="../../assets/aniversarios.png" alt="Avisos" width="40" />
+            </div>
+            <div>
+                <span>Aniversários</span>
+            </div>
+        </div>
+        <div class="text-center">
+            <div>
+                <img src="../../assets/agenda.png" alt="Avisos" width="40" />
+            </div>
+            <div>
+                <span>Agenda</span>
+            </div>
         </div>
     </div>
-    <div class="text-center">
-        <div>
-            <img src="../../assets/agenda.png" alt="Avisos" width="40" />
-        </div>
-        <div>
-            <span>Agenda</span>
-        </div>
-    </div>
-</div>

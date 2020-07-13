@@ -1,10 +1,5 @@
-.row {
-    padding-top: 17%;
-}
-
 .welcome {
     font-size: 20px;
-    background: #f2f4f5;
     width: 55%;
     line-height: 25px;
 }
@@ -33,12 +28,7 @@
 }
 
 .day {
-    padding-left: 2%;
     font-size: 30px;
-    width: 15%;
-    position: absolute;
-    border-right: 0.5px solid #0b0c48;
-    font-weight: 800;
 }
 
 .verse-meditation {
@@ -93,4 +83,83 @@
 
 .btn-boletim div:last-child {
     font-size: 27px;
+}
+
+.start {
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#023265, #021438);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    box-shadow: 2px 3px 20px #555555;
+}
+
+.navbar-brand {
+    color: whitesmoke;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 10px;
+    color: white;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 30px #555555;
+}
+
+.box:hover {
+    box-shadow: none;
+}
+
+.lilac-soft {
+    background: #33368a;
+}
+
+.lilac-hard {
+    background: #4d52e0;
+}
+
+.blue-hard {
+    background: #04075c;
+}
+
+.blue-soft {
+    background: #4282c6;
+}
+
+.text-title {
+    text-shadow: 2px 3px 4px #555555;
+}
+
+.box > span:first-child {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.box > span:nth-child(2) {
+    position: absolute;
+    bottom: 3px;
+    right: 8px;
+}
+
+.glassy-text {
+    height: 100px;
+    border-radius: 25px;
+    backdrop-filter: blur(20px) contrast(.8);
+}
+
+.circle {
+    background: url('../../assets/logo_icb.ico') center no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }

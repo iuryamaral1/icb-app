@@ -1,5 +1,5 @@
 import { AuthService } from './../login/auth.service';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pregacao } from '../pregacao-audio/pregacao.model';
 
@@ -7,7 +7,7 @@ import { Pregacao } from '../pregacao-audio/pregacao.model';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
 
