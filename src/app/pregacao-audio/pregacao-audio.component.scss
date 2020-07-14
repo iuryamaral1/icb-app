@@ -67,7 +67,7 @@
     border-top-right-radius: 35px;
 
     .audio {
-        width: 150px;
+        min-width: 140px;
         height: 210px;
         border: none;
         @include box-shadow();
