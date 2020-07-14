@@ -1,26 +1,26 @@
-<div class="library">
-  <div class="search">
-    <span class="fa fa-arrow-left back-button" (click)="redirectToHome()"></span>
-    <input type="text" />
-    <span class="fa fa-search"></span>
+<div class="library text-center">
+  <div class="search d-flex justify-content-center align-items-center">
+    <h5 class="title">Explore as mensagens</h5>
+    <div class="divider mb-3"></div>
+    <div class="subtitle">
+      <p>Espalhando a Palavra de Deus</p>
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Busque mensagens..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <span class="input-group-text fa fa-search"></span>
+      </div>
+    </div>
   </div>
-  <div [ngClass]="showLoader ? 'displayLoader' : 'hideLoader'">
-    <div class="loader"></div>
-  </div>
-  <div class="audio" *ngFor="let pregacao of pregacoes">
-    <div class="icb-icon">
-      <img src="../../assets/thumb-icb.png" alt="ícone ICB" width="55" />
-    </div>
-    <div class="audio-message">
-      {{ pregacao.title }}
-    </div>
-    <div class="audio-message message-preacher">
-      <span>Pr. Joaquim Amaral</span>
-      <span class="fa fa-play-circle play" (click)="hearMessage(pregacao)"></span>
-    </div>
-    <div class="audio-message icons">
-      <span class="fa fa-arrow-circle-down"></span>
-      <span class="fa fa-share-alt-square"></span>
+  
+  <div class="audio-container d-flex justify-content-start align-items-center w-100 p-5">
+    <div class="audio" *ngFor="let pregacao of pregacoes">
+      <div class="icon">
+      </div>
+      <div class="audio-description">
+        <span title="pregacao.title">{{ pregacao.title }}</span>
+        <span>Clique para ouvir</span>
+      </div>
     </div>
   </div>
 </div>

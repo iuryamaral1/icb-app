@@ -1,4 +1,5 @@
-You can add global styles to this file, and also import other style files
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
 html, body {
     padding: 0;
     margin: 0;
@@ -7,7 +8,7 @@ html, body {
 }
 
 * {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Abel', sans-serif;
 }
 
 .container {

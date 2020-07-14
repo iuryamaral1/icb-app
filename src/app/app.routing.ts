@@ -33,7 +33,6 @@ export const routes: Routes = [
                 path: '', component: PresentationComponent
             },  {
                 path: 'pregacao', component: PregacaoAudioComponent,
-                canActivate: [AuthGuard]
             }, {
                 path: 'sobre', component: SobreComponent,
                 canActivate: [AuthGuard]

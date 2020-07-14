@@ -1,0 +1,109 @@
+@mixin box-shadow {
+    box-shadow: 2px 3px 20px #777777;
+}
+
+.library {
+    background: linear-gradient(45deg,#023265, #021438);
+    min-height: 800px;
+}
+
+.divider {
+    border-bottom: 0.5px solid whitesmoke;
+    width: 100px;
+}
+
+.title {
+    font-size: 26px;
+}
+
+.subtitle {
+
+    margin-bottom: 25px;
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.search {
+    padding-top: 30%;
+    flex-direction: column;
+    color: whitesmoke;
+
+    input {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border: 1px solid whitesmoke;
+        border-right: none;
+        background: transparent;
+        color: whitesmoke;
+
+        &:focus {
+            box-shadow: inset 0 0px 0 #ddd;
+        }
+    }
+
+    .input-group {
+        width: 70%;
+    }
+}
+
+.fa-search {
+    background: transparent;
+    border-left: none;
+    color: whitesmoke;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-weight: lighter;
+}
+
+.audio-container {
+    height: 300px;
+    overflow: auto;
+    background: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+
+    .audio {
+        width: 150px;
+        height: 210px;
+        border: none;
+        @include box-shadow();
+        box-sizing: border-box;
+        padding: 5px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 10px;
+
+        .icon {
+            height: 50%;
+            width: 70%;
+            background: url('../../assets/thumb-icb.png') center no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+            @include box-shadow();
+        }
+
+        .audio-description {
+            margin-top: 10%;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            span:first-child {
+                font-size: 20px;
+                max-width: 120px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

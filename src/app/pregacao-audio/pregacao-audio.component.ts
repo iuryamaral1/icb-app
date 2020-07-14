@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-pregacao-audio',
   templateUrl: './pregacao-audio.component.html',
-  styleUrls: ['./pregacao-audio.component.css']
+  styleUrls: ['./pregacao-audio.component.scss']
 })
 export class PregacaoAudioComponent {
 
