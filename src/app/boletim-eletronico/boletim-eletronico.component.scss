@@ -1,0 +1,46 @@
+@mixin glass-effect {
+    backdrop-filter: blur(20px) contrast(.8);    
+}
+
+.start {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#023265, #021438);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    box-shadow: 2px 3px 20px #555555;
+}
+
+.content {
+    margin-top: 20%; 
+    .title { font-size: 20px; }
+}
+
+.glassy-text {
+    height: 300px;
+    border-radius: 25px;
+    @include glass-effect();   
+}
+
+.see-more {
+    position: absolute;
+    bottom: 10px;
+    right: 18px;
+}
+
+.menu {
+
+    .col-3 {
+        border-radius: 25px;
+        box-shadow: 2px 3px 20px #555555;
+        height: 120px;
+    }
+
+}
+
+
+

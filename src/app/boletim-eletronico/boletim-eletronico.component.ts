@@ -6,7 +6,7 @@ import { BoletimService } from '../services/boletim-service.service';
 @Component({
   selector: 'app-boletim-eletronico',
   templateUrl: './boletim-eletronico.component.html',
-  styleUrls: ['./boletim-eletronico.component.css']
+  styleUrls: ['./boletim-eletronico.component.scss']
 })
 export class BoletimEletronicoComponent extends AbstractService {
 
