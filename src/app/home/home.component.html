@@ -1,32 +1,44 @@
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">
-      <span>ICB</span>
-      <span>Campina do Barreto</span>
-    </a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/home']">Início<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['boletim-eletronico']">Boletim Digital</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['biblia']">Bíblia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['pregacao']">Pregações em áudio</a>
-        </li>
-      </ul>
-      <span (click)="logout()" class="navbar-text">
-        Sair
-      </span>
-    </div>
-  </nav>
   <div class="container">
-    <router-outlet></router-outlet>
+    <div class="row no-gutters">
+      <div class="col-12">
+          <nav class="navbar navbar-expand-lg navbar-dark">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                <span>ICB</span>
+              </a>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" [routerLink]="['/home']">Início<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" [routerLink]="['administracao']">Administração</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['boletim-eletronico']">Boletim Digital</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['biblia']">Bíblia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['pregacao']">Pregações em áudio</a>
+                  </li>
+                </ul>
+                <span (click)="logout()" class="navbar-text">
+                  Sair
+                </span>
+              </div>
+            </nav>
+      </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-12">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
   </div>
+  
+  

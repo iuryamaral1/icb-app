@@ -1,8 +1,6 @@
-<div class="row no-gutters">
 
-  <div class="row w-100 no-gutters start">
-    <div class="col-9 text-center">
-      <div class="col-12 glassy-text d-flex justify-content-between align-items-center">
+  <div class="col-12 text-center w-100 start">
+      <div class="col-9 glassy-text d-flex justify-content-between align-items-center">
         <div class="w-100 d-flex justify-content-around align-items-center">
           <img src="../../assets/logo_icb.ico" class="circle" />
           <div>
@@ -11,7 +9,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>  
 
   <div class="container apps">
@@ -19,77 +16,53 @@
       <div class="col-11 offset-1 text-title text-left">
         <h5>APLICAÇÕES</h5>
       </div>
-      <div class="col-4 ml-4 mr-1 box lilac-hard" (click)="redirectTo('/home/pregacao')">
-        <span class="fa fa-podcast"></span>
-        <span>Pregação</span>
+      <div class="col-4 ml-4 mr-1">
+        <app-card-box
+          [url]="'/home/pregacao'"
+          [title]="'Pregacão'"
+          [icon]="'fa fa-podcast'"
+          [color]="'lilac-soft'"
+        ></app-card-box>
       </div>
-      <div class="col-6 mb-2 box lilac-soft" (click)="redirectTo('/home/biblia')">
-        <span class="fa fa-book"></span>
-        <span>Bíblia Sagrada</span>
+      <div class="col-6 mb-2">
+        <app-card-box
+          [url]="'/home/biblia'"
+          [title]="'Bíblia'"
+          [icon]="'fa fa-book'"
+          [color]="'lilac-soft'"
+        ></app-card-box>
       </div>
-      <div class="col-6 mb-2 ml-4 mr-1 box blue-hard" (click)="redirectTo('/home/boletim-eletronico')">
-        <span class="fa fa-bookmark"></span>
-        <span>Boletim Digital</span>
+      <div class="col-6 mb-2 ml-4 mr-1">
+        <app-card-box
+          [url]="'/home/boletim-eletronico'"
+          [title]="'Boletim'"
+          [icon]="'fa fa-bookmark'"
+          [color]="'blue-hard'"
+        ></app-card-box>
       </div>
-      <div class="col-4 box blue-soft">
-        <span class="fa fa-calendar"></span>
-        <span>Avisos</span>
+      <div class="col-4">        
+        <app-card-box
+          [url]="''"
+          [title]="'Avisos'"
+          [icon]="'fa fa-calendar'"
+          [color]="'blue-soft'"
+        ></app-card-box>
       </div>
-      <div class="col-4 ml-4 mr-1 box lilac-hard">
-        <span class="fa fa-users"></span>
-        <span>Escalas</span>
+      <div class="col-4 ml-4 mr-1">
+        <app-card-box
+          [url]="''"
+          [title]="'Escalas'"
+          [icon]="'fa fa-users'"
+          [color]="'lilac-hard'"
+        ></app-card-box>
       </div>
-      <div class="col-6 mb-2 box blue-hard">
-        <span class="fa fa-birthday-cake"></span>
-        <span>Aniversários</span>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- <div class="col-sm">
-    <div class="welcome h-100 pl-4 pull-left">
-      <div>Seja</div>
-      <div>Bem-Vindo!</div>
-    </div>
-    <div class="hour-info">
-      <div class="today">Hoje é {{ dayName | dayPipe }},</div>
-      <div class="day">{{ day }}</div>
-      <div class="month-year">
-        <div>{{ month | monthName }}</div>
-        <div>{{ year }}</div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm verse-meditation h-100">
-    <div class="pt-2">PARA A SUA MEDITAÇÃO</div>
-    <div #meditationText class="pt-3">
-      4 - E viu Deus que a luz era boa; e fez Deus separação entre as trevas e a luz. (Gn. 1.4)
-    </div>
-    <div class="pull-right pr-5 pb-3" (click)="shareMeditationText()">Compartilhar <span class="fa fa-share-alt-square"></span></div>
-  </div>
-  <div (click)="redirectToBoletim()" class=" w-100 mt-1 mb-1 p-2 btn-boletim text-center">
-    <div>Boletim</div>
-    <div>Digital <span class="fa fa-share"></span></div>
-  </div>
-  <div class="col-sm w-100 h-100 title-audio">
-    <div>
-      <span class="pr-2 font-weight-bold">Áudios</span>
-      <span>que</span>
-    </div>
-    <div class="font-weight-bold"><span class="fa fa-headphones"></span> Edificam</div>
-  </div>
-  <div class="col-sm audio-back mt-3">
-    <div class="w-100 d-flex justify-content-between align-items-center pull-right pr-2 audio-message">
-      <div class="ml-2">
-        <div>Pregações e reflexões.</div>
-        <div>Compartilhe.</div>
-        <div>Ouça.</div>
-      </div>
-      <div>
-        <button [routerLink]="['pregacao']" class="btn btn-danger"><span class="fa fa-headphones"></span> Ouvir</button>
+      <div class="col-6 mb-1">
+        <app-card-box
+          [url]="''"
+          [title]="'Aniversários'"
+          [icon]="'fa fa-birthday-cake'"
+          [color]="'blue-hard'"
+        ></app-card-box>
       </div>
     </div>
   </div>
-</div> -->

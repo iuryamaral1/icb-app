@@ -1,3 +1,5 @@
+import { AniversariantesComponent } from './administracao/aniversariantes/aniversariantes.component';
+import { AdministracaoComponent } from './administracao/administracao.component';
 import { ContatoComponent } from './contato/contato.component';
 import { PregacaoAudioComponent } from './pregacao-audio/pregacao-audio.component';
 import { Routes } from '@angular/router';
@@ -44,7 +46,6 @@ export const routes: Routes = [
                 canActivate: [AuthGuard]
             }, {
                 path: 'boletim-eletronico', component: BoletimEletronicoComponent,
-                
             }, {
                 path: 'biblia', component: BibliaComponent,
                 canActivate: [AuthGuard]
@@ -56,6 +57,15 @@ export const routes: Routes = [
                 canActivate: [AuthGuard]
             }, {
                 path: 'boletim-cultos', component: BoletimCultosComponent
+            }, {
+                path: 'administracao',
+                children: [
+                    {
+                        path: '', component: AdministracaoComponent
+                    }, {
+                        path: 'aniversariantes', component: AniversariantesComponent
+                    }
+                ]
             }
         ]
     }

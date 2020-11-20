@@ -37,7 +37,5 @@ export class PresentationComponent {
       });
     });
   }
-  redirectTo(path: string): void {
-    this.router.navigateByUrl(`${path}`);
-  }
+  
 }

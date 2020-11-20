@@ -1,0 +1,27 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 10px;
+    color: white;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 30px #555555;
+}
+
+.box:hover {
+    box-shadow: none;
+}
+
+.box > span:first-child {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.box > span:nth-child(2) {
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+}

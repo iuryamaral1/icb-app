@@ -15,3 +15,19 @@ html, body {
     padding:0!important;
     margin:0!important;
 }
+
+.lilac-soft {
+    background: #33368a;
+}
+
+.lilac-hard {
+    background: #4d52e0;
+}
+
+.blue-hard {
+    background: #04075c;
+}
+
+.blue-soft {
+    background: #4282c6;
+}

@@ -37,6 +37,9 @@ import { UserService } from './services/user.service';
 import { BoletimAvisosComponent } from './boletim-avisos/boletim-avisos.component';
 import { BoletimCultosComponent } from './boletim-cultos/boletim-cultos.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { AdministracaoComponent } from './administracao/administracao.component';
+import { AniversariantesComponent } from './administracao/aniversariantes/aniversariantes.component';
+import { CardBoxComponent } from './components/card-box/card-box.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +63,9 @@ import { CalendarComponent } from './calendar/calendar.component';
     BoletimAvisosComponent,
     BoletimCultosComponent,
     CalendarComponent,
+    AdministracaoComponent,
+    AniversariantesComponent,
+    CardBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +76,7 @@ import { CalendarComponent } from './calendar/calendar.component';
     AngularFontAwesomeModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [AuthService,
               PregacaoService,

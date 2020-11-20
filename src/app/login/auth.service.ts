@@ -48,8 +48,7 @@ export class AuthService {
         const db = firebase.database();
         const userId = UUID.UUID();
 
-        db.ref().child('users').set({
-            id: userId,
+        db.ref('users/' + userId).set({
             email: email,
             name: name
         });
